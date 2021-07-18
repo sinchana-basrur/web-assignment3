@@ -1,0 +1,80 @@
+<?xml version = "1.0"  encoding = "utf-8"?>
+<!DOCTYPE car_catalog [
+<!ELEMENT car_catalog (car+)>
+<!ELEMENT car (year, make, model, color, engine, number_of_doors, transmission_type, accessories)>
+  <!ELEMENT make (#PCDATA)>
+  <!ELEMENT model (#PCDATA)>
+  <!ELEMENT year (#PCDATA)>
+  <!ELEMENT color (#PCDATA)>
+  <!ELEMENT engine (number_of_cylinders, fuel_system)>
+  <!ELEMENT number_of_doors (#PCDATA)>
+  <!ELEMENT transmission_type (#PCDATA)>
+  <!ELEMENT accessories (#PCDATA)>
+  <!ELEMENT number_of_cylinders (#PCDATA)>
+  <!ELEMENT fuel_system (#PCDATA)>
+
+  <!ATTLIST accessories radio CDATA #REQUIRED>
+  <!ATTLIST accessories air_conditioning CDATA #REQUIRED>
+  <!ATTLIST accessories power_windows CDATA #REQUIRED>
+  <!ATTLIST accessories power_steering CDATA #REQUIRED>
+  <!ATTLIST accessories power_brakes CDATA #REQUIRED>
+
+  <!ENTITY c "Chevrolet">
+  <!ENTITY f "Ford">
+  <!ENTITY d "Dodge">
+  <!ENTITY h "Honda">
+  <!ENTITY n "Nisson">
+  <!ENTITY t "Toyota">
+
+]>
+
+<?xml-stylesheet type="text/css" href="carstyle.css"?>
+  <car_catalog>
+  <title> Car Catalog </title><l />
+    <car>
+      <make> &c; </make><l />
+      <year> 1997 </year><l />
+      <model> Impala </model><l />
+      <color> Light blue </color><l />
+      <engine>
+        <number_of_cylinders> 8 cylinder</number_of_cylinders><l />
+        <fuel_system> multi-port fuel injected </fuel_system><l />
+      </engine>
+      <number_of_doors> 4 door </number_of_doors><l />
+      <transmission_type> 4 speed automatic</transmission_type><l />
+      <accessories radio = "yes"  air_conditioning = "yes"
+                    power_windows = "yes"
+                    power_steering = "yes"
+                    power_brakes = "yes" /><l />
+    </car>
+    <car>
+      <make> &f; </make><l />
+      <year> 1965 </year><l />
+      <model> Mustang </model><l />
+      <color> White </color><l />
+      <engine>
+        <number_of_cylinders> 8 cylinder</number_of_cylinders><l />
+        <fuel_system> 4BBL carburetor </fuel_system><l />
+      </engine>
+      <number_of_doors> 2 door </number_of_doors><l />
+      <transmission_type> 3 speed manual </transmission_type><l />
+      <accessories radio = "yes"  air_conditioning = "no"
+                    power_windows = "no"  power_steering = "yes"
+                    power_brakes = "yes" /><l />
+    </car>
+    <car>
+      <make> &t; </make><l />
+      <year> 1985 </year><l />
+      <model> Camry </model><l />
+      <color> Blue </color><l />
+      <engine>
+        <number_of_cylinders> 4 cylinder</number_of_cylinders><l />
+        <fuel_system> fuel injected </fuel_system><l />
+      </engine>
+      <number_of_doors> 4 door </number_of_doors><l />
+      <transmission_type> 4 speed manual </transmission_type><l />
+      <accessories radio = "yes"  air_conditioning = "yes"
+                    power_windows = "no"  power_steering = "yes"
+                    power_brakes = "yes" /><l />
+    </car>
+  </car_catalog>
